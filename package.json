@@ -2,7 +2,7 @@
   "name": "css-xpaths",
   "version": "0.0.1",
   "description": "Converts CSS selectors to xpaths",
-  "main": "js/css.js",
+  "main": "js/css_to_xpath.js",
   "directories": {
     "test": "test"
   },
