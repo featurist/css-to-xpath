@@ -1,0 +1,38 @@
+{
+  "name": "css-xpaths",
+  "version": "0.0.1",
+  "description": "Converts CSS selectors to xpaths",
+  "main": "js/css.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/featurist/css-xpaths.git"
+  },
+  "dependencies": {
+    "xpath-builder": "0.0.7",
+    "bo-selector": "0.0.10"
+  },
+  "devDependencies": {
+    "pogo": "~0.6.4",
+    "mocha": "~1.16.2",
+    "should": "~2.1.1",
+    "cheerio": "~0.12.4",
+    "libxmljs": "~0.8.1"
+  },
+  "keywords": [
+    "xpath",
+    "html",
+    "dsl"
+  ],
+  "author": {
+    "name": "Josh Chisholm",
+    "email": "joshchisholm@gmail.com",
+    "url": "http://featurist.co.uk/"
+  },
+  "license": "MIT"
+}
