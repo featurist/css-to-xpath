@@ -1,8 +1,11 @@
 libxmljs = require "libxmljs"
-css = require '../js/css_to_xpath.js'
+css to xpath = require '../js/css_to_xpath.js'
 cheerio = require 'cheerio'
 
-describe 'css'
+describe 'css-to-xpath'
+
+    it "can be invoked as a string-in string-out function"
+        css to xpath "p#z".should.equal ".//p[./@id = 'z']"
 
     select (expression, type, document) =
         selected = document.find(expression.to XPath(type))
@@ -18,7 +21,7 @@ describe 'css'
     (selector) should find (ids) in (html) =
         describe (selector)
             it "should find #(ids) #(html)"
-                c = css.parse(selector)
+                c = css to xpath.parse(selector)
                 doc = libxmljs.parseXml("<top>" + html + "</top>")
                 matching tags = select(c, nil, doc).map @(el) @{ el.name }
                 matching tags.should.eql (ids)

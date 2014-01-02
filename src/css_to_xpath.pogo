@@ -7,4 +7,9 @@ parser.yy.create (data) = @new Expression (data)
 parse (selector) =
     parser.parse (selector).render (xpath builder, 'descendant')
 
-exports.parse = parse
+convert to xpath (selector) =
+    parse (selector).to XPath()
+
+convert to xpath.parse = parse
+
+module.exports = convert to xpath

@@ -1,6 +1,6 @@
 (function() {
     var self = this;
-    var parser, xpathBuilder, Expression, parse;
+    var parser, xpathBuilder, Expression, parse, convertToXpath;
     parser = require("bo-selector").parser;
     xpathBuilder = require("xpath-builder").dsl();
     Expression = require("./expression");
@@ -11,5 +11,9 @@
     parse = function(selector) {
         return parser.parse(selector).render(xpathBuilder, "descendant");
     };
-    exports.parse = parse;
+    convertToXpath = function(selector) {
+        return parse(selector).toXPath();
+    };
+    convertToXpath.parse = parse;
+    module.exports = convertToXpath;
 }).call(this);
