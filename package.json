@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/featurist/css-xpaths.git"
+    "url": "https://github.com/featurist/css-to-xpath.git"
   },
   "dependencies": {
     "xpath-builder": "0.0.7",
