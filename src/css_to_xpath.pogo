@@ -11,5 +11,6 @@ convert to xpath (selector) =
     parse (selector).to XPath()
 
 convert to xpath.parse = parse
+convert to xpath.x path builder = xpath builder
 
 module.exports = convert to xpath

@@ -16,6 +16,17 @@ cssToXPath('p:not(:has(a.x))');
 .//p[not(.//a[contains(concat(' ', normalize-space(./@class), ' '), ' x ')])]
 ```
 
+Or if you want to continue building the XPath with xpath-builder:
+```js
+var cssToXPath = require('css-to-xpath');
+
+var xpathBuilderObject = cssToXPath.parse('p:not(:has(a.x))');
+xpathBuilderObject = xpathBuilderObject.where(cssToXPath.xPathBuilder.text().equals('Some Text Content'));
+
+// And get the XPath string
+xpathBuilderObject.toXPath();
+```
+
 ### How?
 
 css-to-xpath parses css selectors using [bo-selector](https://github.com/featurist/bo-selector) and turns them into xpaths using [xpath-builder](https://github.com/featurist/xpath-builder)

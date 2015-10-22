@@ -15,5 +15,6 @@
         return parse(selector).toXPath();
     };
     convertToXpath.parse = parse;
+    convertToXpath.xPathBuilder = xpathBuilder;
     module.exports = convertToXpath;
 }).call(this);
