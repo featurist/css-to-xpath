@@ -206,3 +206,9 @@ describe 'css-to-xpath'
     "*:nth-last-of-type(even)" should find ['a', 'c', 'e'] in '<a /><b /><c /><d /><e /><f />'
 
     "*:nth-last-of-type(odd)" should find ['b', 'd', 'f'] in '<a /><b /><c /><d /><e /><f />'
+
+    "*:contains(foo)" should find ['a', 'b', 'c'] in '<a><b>foo</b><c>foo</c><d /></a>'
+
+    "b:contains(foo)" should find ['b'] in '<a><b>foo</b><c>foo</c><d /></a>'
+
+    "a *:contains(foo)" should find ['b', 'c'] in '<a><b>foo</b><c>foo</c><d /></a>'

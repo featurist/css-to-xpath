@@ -200,6 +200,10 @@
             var self = this;
             return xpath.firstOfType();
         },
+        contains: function(node, xpath) {
+            var self = this;
+            return xpathBuilder.contains(node.func.args.selectors[0].name);
+        },
         matchesSelectorList: function(node, xpath) {
             var self = this;
             var condition, i;

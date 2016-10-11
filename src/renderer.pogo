@@ -148,6 +148,9 @@ Renderer.prototype = {
     first_of_type (node, xpath) =
         xpath.first of type ()
 
+    contains (node, xpath) =
+        xpath builder.contains(node.func.args.selectors.0.name)
+
     matches selector list (node, xpath) =
         if (node.selectors.length > 0)
             condition = self.matches selector(node.selectors.0, xpath builder)
